@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Portal</title>
+    <!-- Tailwind and DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/ffaf216563.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body class="max-w-7xl mx-auto">
+    <!-- nav section -->
+    <header>
+        <div class="navbar bg-base-100">
+            <div class="flex-1">
+                <a
+                    class="btn btn-ghost text-lg md:text-xl text-[#5d5fefFF] hover:text-white hover:bg-[#5d5fefFF]">News</a>
+                <a
+                    class="btn btn-ghost text-lg md:text-xl text-[#5d5fefFF] hover:text-white hover:bg-[#5d5fefFF]">Portal</a>
+            </div>
+            <div class="flex-none md:gap-2">
+                <div class="dropdown dropdown-end flex">
+                    <a
+                        class="btn btn-ghost text-lg  md:text-xl hover:text-[#5d5fefFF] hover:underline hover:bg-inherit">News</a>
+                    <a
+                        class="btn btn-ghost text-lg  md:text-xl hover:text-[#5d5fefFF] hover:underline hover:bg-inherit">Blog</a>
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
+                        <div class="w-10 rounded-full">
+                            <img alt="Tailwind CSS Navbar component"
+                                src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
+                        </div>
+                    </div>
+                    <ul tabindex="0"
+                        class="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+                        <li>
+                            <a class="justify-between">
+                                Profile
+                                <span class="badge">New</span>
+                            </a>
+                        </li>
+                        <li><a>Settings</a></li>
+                        <li><a>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </header>
+    <!-- Main section -->
+    <main>
+        <!-- Category container -->
+        <div id="category-bar-container" class="category-bar grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 space-y-3 mt-10 bg-gray-300 rounded-lg p-2 items-center">
+        </div>
+        <!-- Search box -->
+        <section class="mt-10 mb-10 text-center">
+            <div class="">
+                <span><input id="search-box" type="text" placeholder="type Here category name..." class="input input-bordered w-full max-w-xl" /></span>
+                <button onclick="handleSearch()" class="btn bg-gray-500 text-white">Search</button>
+            </div>
+        </section>
+        <!-- Loading spinner -->
+        <section>
+            <div id="loading-spinner">
+                <img class="mx-auto mb-5" src="https://i.gifer.com/VAyR.gif" alt="">
+            </div>
+        </section>
+        <!-- News card -->
+        <section id="news-container" class="space-y-3">
+           
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <!-- Script file -->
+    <script src="./Script/news.js"></script>
+</body>
+
+</html>
